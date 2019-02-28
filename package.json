@@ -1,0 +1,24 @@
+{
+  "name": "sports-poll-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Sports Poll backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBehtemam/Sports-Poll-Frontend.git"
+  },
+  "author": "Mohammad Bagher Ehtemam (MBehtemam)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MBehtemam/Sports-Poll-Frontend/issues"
+  },
+  "homepage": "https://github.com/MBehtemam/Sports-Poll-Frontend#readme",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}
