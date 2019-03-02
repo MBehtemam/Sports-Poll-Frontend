@@ -1,8 +1,8 @@
 import AdminBar from "../components/AdminBar";
-import CreateGroup from "../components/CreateGroup";
+import CreateSport from "../components/CreateSport";
 const AdminPage = () => (
   <div>
-    <CreateGroup />
+    <CreateSport />
     <AdminBar />
   </div>
 );
