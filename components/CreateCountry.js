@@ -32,10 +32,9 @@ export default class CreateCountry extends Component {
               e.preventDefault();
               const res = await createCountry();
             }}
-            aria-busy={loading}
           >
             <Error error={error} />
-            <fieldset disabled={loading}>
+            <fieldset disabled={loading} aria-busy={loading}>
               <label htmlFor="name">
                 <input
                   type="text"

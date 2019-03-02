@@ -1,9 +1,8 @@
 import AdminBar from "../components/AdminBar";
-import CountriesPicker from "../components/CountriesPicker";
-import CreateCountry from "../components/CreateCountry";
+import CreateGroup from "../components/CreateGroup";
 const AdminPage = () => (
   <div>
-    <CreateCountry />
+    <CreateGroup />
     <AdminBar />
   </div>
 );
