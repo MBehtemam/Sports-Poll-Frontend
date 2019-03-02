@@ -1,5 +1,5 @@
 import AdminBar from "../components/AdminBar";
-import CreateSport from "../components/CreateSport";
+import CreateSport from "../components/CreateTeam";
 const AdminPage = () => (
   <div>
     <CreateSport />
