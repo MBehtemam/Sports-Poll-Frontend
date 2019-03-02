@@ -1,7 +1,9 @@
 const Picker = ({ items, onChange, defaultValue, keyValue, itemValue }) => (
-  <select>
+  <select onChange={e => onChange(e.target.value)}>
     {items.map(item => (
-      <option key={item[keyValue]}>{item[itemValue]}</option>
+      <option key={item[keyValue]} value={item[keyValue]}>
+        {item[itemValue]}
+      </option>
     ))}
   </select>
 );
