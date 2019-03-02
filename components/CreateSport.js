@@ -35,7 +35,9 @@ export default class CreateSport extends Component {
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
+              <legend>Create Sport</legend>
               <label htmlFor="name">
+                Name:
                 <input
                   type="text"
                   id="name"
@@ -47,6 +49,7 @@ export default class CreateSport extends Component {
                 />
               </label>
               <label htmlFor="icon">
+                Icon:
                 <input
                   type="text"
                   id="icon"

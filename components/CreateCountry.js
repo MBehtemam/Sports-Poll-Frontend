@@ -35,7 +35,9 @@ export default class CreateCountry extends Component {
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
+              <legend>Create Country</legend>
               <label htmlFor="name">
+                Name:
                 <input
                   type="text"
                   id="name"
@@ -47,6 +49,7 @@ export default class CreateCountry extends Component {
                 />
               </label>
               <label htmlFor="flag">
+                Flag Name:
                 <input
                   type="text"
                   id="flag"

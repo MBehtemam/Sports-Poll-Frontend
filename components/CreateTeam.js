@@ -31,8 +31,10 @@ export default class CreateTeam extends Component {
             }}
           >
             <fieldset disabled={loading} aria-busy={loading}>
+              <legend>Create Team</legend>
               <Error error={error} />
               <label htmlFor="name">
+                Name:
                 <input
                   type="text"
                   id="name"

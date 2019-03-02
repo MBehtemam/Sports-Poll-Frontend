@@ -31,8 +31,10 @@ export default class CreateGroup extends Component {
             }}
           >
             <fieldset disabled={loading} aria-busy={loading}>
+              <legend>Create Group</legend>
               <Error error={error} />
               <label htmlFor="name">
+                Name:
                 <input
                   type="text"
                   id="name"

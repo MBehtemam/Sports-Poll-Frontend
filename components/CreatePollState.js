@@ -35,7 +35,9 @@ export default class CreatePollState extends Component {
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
+              <legend>Create Poll States</legend>
               <label htmlFor="name">
+                Name:
                 <input
                   type="text"
                   id="name"
@@ -47,6 +49,7 @@ export default class CreatePollState extends Component {
                 />
               </label>
               <label htmlFor="value">
+                Value:
                 <input
                   type="text"
                   id="value"
