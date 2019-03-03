@@ -28,6 +28,7 @@ export default class CreateTeam extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await createTeam();
+              this.setState({ name: "" });
             }}
           >
             <fieldset disabled={loading} aria-busy={loading}>

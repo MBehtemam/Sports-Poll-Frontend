@@ -28,6 +28,7 @@ export default class CreateGroup extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await createGroup();
+              this.setState({ name: "" });
             }}
           >
             <fieldset disabled={loading} aria-busy={loading}>

@@ -11,6 +11,13 @@ const AdminBar = () => (
     </button>
     <button
       onClick={() =>
+        Router.push({ pathname: "/admin", query: { section: "pollStates" } })
+      }
+    >
+      Manage Poll States
+    </button>
+    <button
+      onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "teams" } })
       }
     >

@@ -146,3 +146,4 @@ export default class CreatePoll extends Component {
     );
   }
 }
+export { CREATE_POLL_INFORMATION_QUERY };

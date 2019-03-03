@@ -3,7 +3,7 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
-
+import { CREATE_POLL_INFORMATION_QUERY } from "./CreatePoll";
 const CREATE_POLL_STATE_MUTATION = gql`
   mutation CREATE_SPORT_MUTATION($name: String, $value: String) {
     createPollState(name: $name, value: $value) {
@@ -25,12 +25,17 @@ export default class CreatePollState extends Component {
   };
   render() {
     return (
-      <Mutation mutation={CREATE_POLL_STATE_MUTATION} variables={this.state}>
+      <Mutation
+        mutation={CREATE_POLL_STATE_MUTATION}
+        variables={this.state}
+        refetchQueries={[{ query: CREATE_POLL_INFORMATION_QUERY }]}
+      >
         {(createPollState, { loading, error, called, data }) => (
           <Form
             onSubmit={async e => {
               e.preventDefault();
               const res = await createPollState();
+              this.setState({ name: "", value: "" });
             }}
           >
             <Error error={error} />

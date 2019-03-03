@@ -3,6 +3,7 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
+import Success from "./SuccessMessage";
 
 const CREATE_SPORT_MUTATION = gql`
   mutation CREATE_SPORT_MUTATION($name: String, $icon: String) {
@@ -31,9 +32,14 @@ export default class CreateSport extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await createSport();
+              this.setState({ name: "", icon: "" });
             }}
           >
             <Error error={error} />
+            <Success
+              success={!error && called}
+              message={`successfully create sport`}
+            />
             <fieldset disabled={loading} aria-busy={loading}>
               <legend>Create Sport</legend>
               <label htmlFor="name">

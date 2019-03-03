@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./styles/Header.styled";
 import Brand from "./styles/Brand.styled";
 import User from "./User";
+import SignOut from "./SignOut";
 
 const MainHeader = () => (
   <Header>
@@ -10,10 +11,16 @@ const MainHeader = () => (
     </Brand>
     <User>
       {({ data: { user } }) => {
-        if (user) {
-          return <p>{user.name}</p>;
+        {
+          return user ? (
+            <p>
+              Hello {user.name}
+              <SignOut />
+            </p>
+          ) : (
+            <p>Sign in</p>
+          );
         }
-        return <p>Sign in</p>;
       }}
     </User>
   </Header>

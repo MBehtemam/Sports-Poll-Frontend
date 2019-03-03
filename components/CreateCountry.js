@@ -31,6 +31,7 @@ export default class CreateCountry extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await createCountry();
+              this.setState({ name: "", flag: "" });
             }}
           >
             <Error error={error} />
