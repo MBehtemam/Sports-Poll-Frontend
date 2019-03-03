@@ -32,7 +32,6 @@ class AdminPage extends Component {
     }
   };
   render() {
-    const { query } = this.props;
     return (
       <div>
         <AdminBar />
