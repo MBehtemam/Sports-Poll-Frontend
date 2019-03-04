@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suits for Picker should match with snapshot 1`] = `
+<select
+  onChange={[Function]}
+>
+  <option
+    value={null}
+  >
+    ----
+  </option>
+  <option
+    value="name1"
+  />
+  <option
+    value="name2"
+  />
+  <option
+    value="name3"
+  />
+</select>
+`;

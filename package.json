@@ -40,9 +40,6 @@
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
     ],
-    "setupFilesAfterEnv": [
-      "./node_modules/jest-enzyme/lib/index.js"
-    ],
     "transform": {
       "\\.(gql|graphql)$": "jest-transform-graphql",
       ".*": "babel-jest",
