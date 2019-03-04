@@ -7,7 +7,7 @@
     "dev": "next -p 7777",
     "build": "next build",
     "start": "next start",
-    "test": "NODE_ENV=test jest --watch"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -53,6 +53,8 @@
     "enzyme-adapter-react-16": "^1.10.0",
     "enzyme-to-json": "^3.3.5",
     "jest": "^24.1.0",
-    "jest-transform-graphql": "^2.1.0"
+    "jest-styled-components": "^6.3.1",
+    "jest-transform-graphql": "^2.1.0",
+    "react-test-renderer": "^16.8.3"
   }
 }
