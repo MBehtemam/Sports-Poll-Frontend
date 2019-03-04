@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suits for button.styled should match with snapshot 1`] = `
+.c0 {
+  border: none;
+  padding: 15px;
+  min-width: 300px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+<button
+  className="c0"
+/>
+`;
