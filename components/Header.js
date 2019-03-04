@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Header from "./styles/Header.styled";
 import Brand from "./styles/Brand.styled";
 import User from "./User";
@@ -7,7 +8,11 @@ import SignOut from "./SignOut";
 const MainHeader = () => (
   <Header>
     <Brand>
-      <h1>Sports Poll</h1>
+      <Link href="/">
+        <h1>
+          <a href="">Sports Poll</a>
+        </h1>
+      </Link>
     </Brand>
     <User>
       {({ data: { user } }) => {
@@ -18,7 +23,9 @@ const MainHeader = () => (
               <SignOut />
             </p>
           ) : (
-            <p>Sign in</p>
+            <Link href="/signup">
+              <a>Sign in</a>
+            </Link>
           );
         }
       }}
