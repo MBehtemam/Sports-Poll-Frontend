@@ -45,10 +45,11 @@ export default class PollsCarouselPoll extends Component {
               <div>
                 <Button
                   onClick={e => {
-                    e.preventDefault();
+                    // e.preventDefault();
                     updatePoll({
                       variables: { pollId: poll.id, predict: "home" }
                     });
+                    this.props.onNextPoll();
                   }}
                   color="red"
                 >
@@ -56,10 +57,11 @@ export default class PollsCarouselPoll extends Component {
                 </Button>
                 <Button
                   onClick={e => {
-                    e.preventDefault();
+                    // e.preventDefault();
                     updatePoll({
                       variables: { pollId: poll.id, predict: "draw" }
                     });
+                    this.props.onNextPoll();
                   }}
                   color="white"
                 >
@@ -71,6 +73,7 @@ export default class PollsCarouselPoll extends Component {
                     updatePoll({
                       variables: { pollId: poll.id, predict: "away" }
                     });
+                    this.props.onNextPoll();
                   }}
                   color="red"
                 >
@@ -78,7 +81,9 @@ export default class PollsCarouselPoll extends Component {
                 </Button>
               </div>
               <div>
-                <Button color="black">Skip</Button>
+                <Button color="black" onClick={() => this.props.onNextPoll()}>
+                  Skip
+                </Button>
               </div>
             </PollCarouselFooter>
           </PollCarouselPollStyled>

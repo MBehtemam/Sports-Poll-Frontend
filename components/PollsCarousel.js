@@ -18,7 +18,10 @@ class PollsCarousel extends Component {
   };
   render() {
     return !this.state.ended ? (
-      <PollsCarouselPoll poll={this.props.polls[this.state.currentIndex]} />
+      <PollsCarouselPoll
+        onNextPoll={this.nextPoll}
+        poll={this.props.polls[this.state.currentIndex]}
+      />
     ) : (
       <p>No Polls</p>
     );
