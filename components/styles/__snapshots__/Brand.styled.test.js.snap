@@ -8,6 +8,12 @@ exports[`Test suits for brand should match with snapshot 1`] = `
   padding-left: 20px;
 }
 
+.c0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
 <div
   className="c0"
 />
