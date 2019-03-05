@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import AdminBar from "../components/AdminBar";
-import CreatePolls from "../components/CreatePoll";
 import CreatePollState from "../components/CreatePollState";
 import User from "../components/User";
 import CountryManager from "../components/CountriesManager";
 import SportsManager from "../components/SportsManager";
 import GroupsManager from "../components/GroupsManager";
 import TeamsManager from "../components/TeamsManager";
+import PollsManager from "../components/PollsManager";
 class AdminPage extends Component {
   static getInitialProps({ query }) {
     return { query };
@@ -17,7 +17,7 @@ class AdminPage extends Component {
     } = this.props;
     switch (section) {
       case "polls":
-        return <CreatePolls />;
+        return <PollsManager />;
       case "teams":
         return <TeamsManager />;
       case "groups":

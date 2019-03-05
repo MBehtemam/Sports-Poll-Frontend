@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 import Error from "./ErrorMessage";
 import Form from "./styles/Form.styled";
 import Picker from "./Picker";
+import { ALL_POLLS_QUERY } from "./Polls";
 
 const CREATE_POLL_INFORMATION_QUERY = gql`
   query CREATE_POLL_INFORMATION_QUERY {
@@ -71,7 +72,11 @@ export default class CreatePoll extends Component {
     return (
       <Query query={CREATE_POLL_INFORMATION_QUERY}>
         {({ data }) => (
-          <Mutation mutation={CREATE_POLL_MUTATION} variables={this.state}>
+          <Mutation
+            mutation={CREATE_POLL_MUTATION}
+            variables={this.state}
+            refetchQueries={[{ query: ALL_POLLS_QUERY }]}
+          >
             {(createPoll, { loading, error }) => (
               <Form
                 onSubmit={async e => {
