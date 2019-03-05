@@ -3,6 +3,7 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Error from "./ErrorMessage";
 import Form from "./styles/Form.styled";
+import { ALL_TEAMS_QUERY } from "./Teams";
 
 const CREATE_TEAM_MUTATION = gql`
   mutation CREATE_TEAM_MUTATION($name: String) {
@@ -22,7 +23,11 @@ export default class CreateTeam extends Component {
   };
   render() {
     return (
-      <Mutation mutation={CREATE_TEAM_MUTATION} variables={this.state}>
+      <Mutation
+        mutation={CREATE_TEAM_MUTATION}
+        variables={this.state}
+        refetchQueries={[{ query: ALL_TEAMS_QUERY }]}
+      >
         {(createTeam, { loading, error }) => (
           <Form
             onSubmit={async e => {

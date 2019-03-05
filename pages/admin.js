@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import AdminBar from "../components/AdminBar";
 import CreatePolls from "../components/CreatePoll";
 import CreatePollState from "../components/CreatePollState";
-import CreateTeam from "../components/CreateTeam";
 import User from "../components/User";
 import CountryManager from "../components/CountriesManager";
 import SportsManager from "../components/SportsManager";
 import GroupsManager from "../components/GroupsManager";
+import TeamsManager from "../components/TeamsManager";
 class AdminPage extends Component {
   static getInitialProps({ query }) {
     return { query };
@@ -19,7 +19,7 @@ class AdminPage extends Component {
       case "polls":
         return <CreatePolls />;
       case "teams":
-        return <CreateTeam />;
+        return <TeamsManager />;
       case "groups":
         return <GroupsManager />;
       case "pollStates":
