@@ -35,10 +35,10 @@ export default class RandomPolls extends Component {
     return (
       <Query query={RANDOM_POLLS_QUERY}>
         {({ data }) => {
-          if (data.randomPolls.length > 0) {
+          if (data && data.randomPolls && data.randomPolls.length > 0) {
             return <PollsCarousel polls={data.randomPolls} />;
           } else {
-            <p>No Polls</p>;
+            return <p>No Polls</p>;
           }
         }}
       </Query>

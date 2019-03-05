@@ -1,10 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import NProgress from "nprogress";
+import Router from "next/router";
 import Header from "./styles/Header.styled";
 import Brand from "./styles/Brand.styled";
 import User from "./User";
-import SignOut from "./SignOut";
+import Navbar from "./Navbar";
+Router.onRouteChangeStart = () => {
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
+};
 
+Router.onRouteChangeError = () => {
+  NProgress.done();
+};
 const MainHeader = () => (
   <Header>
     <Brand>
@@ -15,20 +26,13 @@ const MainHeader = () => (
       </Link>
     </Brand>
     <User>
-      {({ data: { user } }) => {
-        {
-          return user ? (
-            <p>
-              Hello {user.name}
-              <SignOut />
-            </p>
-          ) : (
-            <Link href="/signup">
-              <a>Sign in</a>
-            </Link>
-          );
-        }
-      }}
+      {({ data: { user } }) => (
+        <Navbar
+          isLoggedIn={user ? true : false}
+          isAdmin={user && user.permissions.includes("ADMIN")}
+          user={user}
+        />
+      )}
     </User>
   </Header>
 );

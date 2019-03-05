@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import AdminBar from "../components/AdminBar";
 import CreatePolls from "../components/CreatePoll";
-import CreateCountry from "../components/CreateCountry";
-import CreateGroup from "../components/CreateGroup";
 import CreatePollState from "../components/CreatePollState";
-import CreateSport from "../components/CreateSport";
 import CreateTeam from "../components/CreateTeam";
+import User from "../components/User";
+import CountryManager from "../components/CountriesManager";
+import SportsManager from "../components/SportsManager";
+import GroupsManager from "../components/GroupsManager";
 class AdminPage extends Component {
   static getInitialProps({ query }) {
     return { query };
@@ -20,23 +21,31 @@ class AdminPage extends Component {
       case "teams":
         return <CreateTeam />;
       case "groups":
-        return <CreateGroup />;
+        return <GroupsManager />;
       case "pollStates":
         return <CreatePollState />;
       case "sports":
-        return <CreateSport />;
+        return <SportsManager />;
       case "countries":
-        return <CreateCountry />;
+        return <CountryManager />;
       default:
         return <span>No selected</span>;
     }
   };
   render() {
     return (
-      <div>
-        <AdminBar />
-        {this.getSection()}
-      </div>
+      <User>
+        {({ data: { user } }) =>
+          user.permissions.includes("ADMIN") ? (
+            <div>
+              <AdminBar />
+              {this.getSection()}
+            </div>
+          ) : (
+            <p>You don't have permission</p>
+          )
+        }
+      </User>
     );
   }
 }

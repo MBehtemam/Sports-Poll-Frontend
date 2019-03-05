@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
 import Success from "./SuccessMessage";
+import { ALL_SPORTS_QUERY } from "./Sports";
 
 const CREATE_SPORT_MUTATION = gql`
   mutation CREATE_SPORT_MUTATION($name: String, $icon: String) {
@@ -26,7 +27,11 @@ export default class CreateSport extends Component {
   };
   render() {
     return (
-      <Mutation mutation={CREATE_SPORT_MUTATION} variables={this.state}>
+      <Mutation
+        mutation={CREATE_SPORT_MUTATION}
+        variables={this.state}
+        refetchQueries={[{ query: ALL_SPORTS_QUERY }]}
+      >
         {(createSport, { loading, error, called, data }) => (
           <Form
             onSubmit={async e => {
@@ -36,10 +41,6 @@ export default class CreateSport extends Component {
             }}
           >
             <Error error={error} />
-            <Success
-              success={!error && called}
-              message={`successfully create sport`}
-            />
             <fieldset disabled={loading} aria-busy={loading}>
               <legend>Create Sport</legend>
               <label htmlFor="name">

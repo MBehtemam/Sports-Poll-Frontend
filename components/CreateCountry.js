@@ -3,6 +3,7 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
+import { ALL_COUNTRIES_QUERY } from "./Countries";
 
 const CREATE_COUNTRY_MUTATION = gql`
   mutation CREATE_COUNTRY_MUTATION($name: String, $flag: String) {
@@ -25,7 +26,11 @@ export default class CreateCountry extends Component {
   };
   render() {
     return (
-      <Mutation mutation={CREATE_COUNTRY_MUTATION} variables={this.state}>
+      <Mutation
+        mutation={CREATE_COUNTRY_MUTATION}
+        variables={this.state}
+        refetchQueries={[{ query: ALL_COUNTRIES_QUERY }]}
+      >
         {(createCountry, { loading, error, called, data }) => (
           <Form
             onSubmit={async e => {

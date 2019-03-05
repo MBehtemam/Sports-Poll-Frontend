@@ -15,7 +15,17 @@ const Signout = props => (
     mutation={SIGN_OUT_MUTATION}
     refetchQueries={[{ query: CURRENT_USER_QUERY }]}
   >
-    {signout => <button onClick={signout}>Sign Out</button>}
+    {signout => (
+      <a
+        href=""
+        onClick={e => {
+          e.preventDefault();
+          signout();
+        }}
+      >
+        Sign Out
+      </a>
+    )}
   </Mutation>
 );
 export default Signout;
