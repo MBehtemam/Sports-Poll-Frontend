@@ -4,7 +4,7 @@ import NProgress from "nprogress";
 import Router from "next/router";
 import Header from "./styles/Header.styled";
 import Brand from "./styles/Brand.styled";
-import User from "./User";
+import User from "../components/Users/User";
 import Navbar from "./Navbar";
 Router.onRouteChangeStart = () => {
   NProgress.start();

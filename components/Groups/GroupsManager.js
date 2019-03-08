@@ -1,4 +1,4 @@
-import Columns from "./styles/Columns";
+import Columns from "../styles/Columns";
 import CreateGroup from "./CreateGroup";
 import GroupsTable from "./GroupsTable";
 

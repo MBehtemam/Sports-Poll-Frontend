@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import PollCarouselPollStyled from "./styles/PollCarouselPoll.styled";
-import SportTitle from "./styles/SportTitle.styled";
-import PollTeamsTitle from "./styles/PollTeamsTitle.styled";
-import PollMeta from "./styles/PollMeta.styled";
-import Button from "./styles/Button.styled";
-import PollCarouselFooter from "./styles/PollCarouselFooter.styled";
+import PollCarouselPollStyled from "../styles/PollCarouselPoll.styled";
+import SportTitle from "../styles/SportTitle.styled";
+import PollTeamsTitle from "../styles/PollTeamsTitle.styled";
+import PollMeta from "../styles/PollMeta.styled";
+import Button from "../styles/Button.styled";
+import PollCarouselFooter from "../styles/PollCarouselFooter.styled";
 
 const UPDATE_POLL_MUTATION = gql`
   mutation UPDATE_POLL_MUTATION($pollId: String!, $predict: String!) {

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import Error from "./ErrorMessage";
-import Form from "./styles/Form.styled";
+import Error from "../ErrorMessage";
+import Form from "../styles/Form.styled";
 import { ALL_GROUPS_QUERY } from "./Groups";
 
 const CREATE_GROUP_MUTATION = gql`

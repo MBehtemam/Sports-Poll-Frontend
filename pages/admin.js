@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import AdminBar from "../components/AdminBar";
-import CreatePollState from "../components/CreatePollState";
-import User from "../components/User";
-import CountryManager from "../components/CountriesManager";
-import SportsManager from "../components/SportsManager";
-import GroupsManager from "../components/GroupsManager";
-import TeamsManager from "../components/TeamsManager";
-import PollsManager from "../components/PollsManager";
+import CreatePollState from "../components/Polls/CreatePollState";
+import User from "../components/Users/User";
+import CountryManager from "../components/Countries/CountriesManager";
+import SportsManager from "../components/Sports/SportsManager";
+import GroupsManager from "../components/Groups/GroupsManager";
+import TeamsManager from "../components/Teams/TeamsManager";
+import PollsManager from "../components/Polls/PollsManager";
 class AdminPage extends Component {
   static getInitialProps({ query }) {
     return { query };

@@ -1,4 +1,4 @@
-import Columns from "./styles/Columns";
+import Columns from "../styles/Columns";
 import CreateTeam from "./CreateTeam";
 import TeamsTable from "./TeamsTable";
 

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Mutation, Query } from "react-apollo";
 import gql from "graphql-tag";
-import Error from "./ErrorMessage";
-import Form from "./styles/Form.styled";
-import Picker from "./Picker";
+import Error from "../ErrorMessage";
+import Form from "../styles/Form.styled";
+import Picker from "../Picker";
 import { ALL_POLLS_QUERY } from "./Polls";
 
 const CREATE_POLL_INFORMATION_QUERY = gql`

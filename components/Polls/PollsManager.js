@@ -1,4 +1,4 @@
-import Columns from "./styles/Columns";
+import Columns from "../styles/Columns";
 import PollsTable from "./PollsTable";
 import CreatePoll from "./CreatePoll";
 

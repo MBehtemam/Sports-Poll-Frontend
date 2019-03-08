@@ -3,7 +3,7 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
-import { CURRENT_USER_QUERY } from "./User";
+import { CURRENT_USER_QUERY } from "../components/Users/User";
 const SIGN_UP_MUTATION = gql`
   mutation SIGN_UP_MUTATION(
     $email: String!

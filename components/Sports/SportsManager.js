@@ -1,4 +1,4 @@
-import Columns from "./styles/Columns";
+import Columns from "../styles/Columns";
 import CreateSport from "./CreateSport";
 import SportsTable from "./SportsTable";
 

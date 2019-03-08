@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import Form from "./styles/Form.styled";
-import Error from "./ErrorMessage";
-import Success from "./SuccessMessage";
+import Form from "../styles/Form.styled";
+import Error from "../ErrorMessage";
+import Success from "../SuccessMessage";
 import { ALL_SPORTS_QUERY } from "./Sports";
 
 const CREATE_SPORT_MUTATION = gql`
