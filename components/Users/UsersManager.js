@@ -1,5 +1,10 @@
 import UsersTable from "./UsersTable";
+import Columns from "../styles/Columns";
 
-const UsersManager = () => <UsersTable />;
+const UsersManager = () => (
+  <Columns>
+    <UsersTable />
+  </Columns>
+);
 
 export default UsersManager;

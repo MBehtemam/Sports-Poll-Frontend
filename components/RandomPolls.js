@@ -33,7 +33,7 @@ const RANDOM_POLLS_QUERY = gql`
 export default class RandomPolls extends Component {
   render() {
     return (
-      <Query query={RANDOM_POLLS_QUERY}>
+      <Query query={RANDOM_POLLS_QUERY} fetchPolicy="network-only">
         {({ data }) => {
           if (data && data.randomPolls && data.randomPolls.length > 0) {
             return <PollsCarousel polls={data.randomPolls} />;
