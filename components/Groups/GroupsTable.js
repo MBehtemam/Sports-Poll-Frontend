@@ -9,8 +9,10 @@ const GroupsTable = props => (
             <h1>Manage Groups</h1>
             <table>
               <thead>
-                <th>#</th>
-                <th>Name</th>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                </tr>
               </thead>
               <tbody>
                 {groups.map((group, index) => (

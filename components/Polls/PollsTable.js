@@ -9,10 +9,12 @@ const PollsTable = props => (
             <h1>Manage polls</h1>
             <table>
               <thead>
-                <th>#</th>
-                <th>Icon</th>
-                <th>Name</th>
-                <th>State</th>
+                <tr>
+                  <th>#</th>
+                  <th>Icon</th>
+                  <th>Name</th>
+                  <th>State</th>
+                </tr>
               </thead>
               <tbody>
                 {polls.map((poll, index) => (

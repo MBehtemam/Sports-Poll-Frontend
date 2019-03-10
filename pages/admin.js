@@ -7,6 +7,7 @@ import SportsManager from "../components/Sports/SportsManager";
 import GroupsManager from "../components/Groups/GroupsManager";
 import TeamsManager from "../components/Teams/TeamsManager";
 import PollsManager from "../components/Polls/PollsManager";
+import UsersManager from "../components/Users/UsersManager";
 class AdminPage extends Component {
   static getInitialProps({ query }) {
     return { query };
@@ -28,6 +29,8 @@ class AdminPage extends Component {
         return <SportsManager />;
       case "countries":
         return <CountryManager />;
+      case "users":
+        return <UsersManager />;
       default:
         return <span>No selected</span>;
     }

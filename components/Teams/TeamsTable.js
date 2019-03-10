@@ -9,8 +9,10 @@ const TeamsTable = props => (
             <h1>Manage teams</h1>
             <table>
               <thead>
-                <th>#</th>
-                <th>Name</th>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                </tr>
               </thead>
               <tbody>
                 {teams.map((team, index) => (

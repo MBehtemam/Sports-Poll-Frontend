@@ -9,9 +9,11 @@ const CountriesTable = props => (
             <h1>Manage Countries</h1>
             <table>
               <thead>
-                <th>#</th>
-                <th>Flag</th>
-                <th>Name</th>
+                <tr>
+                  <th>#</th>
+                  <th>Flag</th>
+                  <th>Name</th>
+                </tr>
               </thead>
               <tbody>
                 {countries.map((country, index) => (
