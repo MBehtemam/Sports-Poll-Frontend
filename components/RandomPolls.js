@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import PollsCarousel from "./PollsCarousel";
+import PollsCarousel from "./Polls/PollsCarousel";
 
 const RANDOM_POLLS_QUERY = gql`
   query RANDOM_POLLS_QUERY {

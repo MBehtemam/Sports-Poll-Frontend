@@ -1,5 +1,5 @@
 import RandomPolls from "../components/RandomPolls";
-import User from "../components/User";
+import User from "../components/Users/User";
 const IndexPage = () => (
   <div>
     <User>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
+import Router from "next/router";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
 import { CURRENT_USER_QUERY } from "../components/Users/User";
@@ -32,30 +33,37 @@ export default class Signin extends Component {
           <Form
             onSubmit={async e => {
               e.preventDefault();
-              const res = await singIn();
-              //   this.setState({ name: "", email: "", password: "" });
+              try {
+                const res = await singIn();
+                if (res.data.singin) {
+                  //redirect to account page
+                  Router.push("/account");
+                }
+              } catch (err) {
+                console.log(err);
+              }
             }}
           >
             <fieldset disabled={loading} aria-busy={loading}>
               <Error error={error} />
               <h2>Sign In</h2>
-              <label htmlFor="name" name="name">
+              <label htmlFor='name' name='name'>
                 Email:
                 <input
-                  type="email"
+                  type='email'
                   onChange={e => this.setState({ email: e.target.value })}
                   value={this.state.email}
                 />
               </label>
-              <label htmlFor="name" name="name">
+              <label htmlFor='name' name='name'>
                 Password:
                 <input
-                  type="password"
+                  type='password'
                   onChange={e => this.setState({ password: e.target.value })}
                   value={this.state.password}
                 />
               </label>
-              <button type="submit">Sign In</button>
+              <button type='submit'>Sign In</button>
             </fieldset>
           </Form>
         )}

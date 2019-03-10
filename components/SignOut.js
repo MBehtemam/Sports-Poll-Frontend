@@ -1,4 +1,5 @@
 import { Mutation } from "react-apollo";
+import Router from "next/router";
 import gql from "graphql-tag";
 import { CURRENT_USER_QUERY } from "../components/Users/User";
 
@@ -17,10 +18,15 @@ const Signout = props => (
   >
     {signout => (
       <a
-        href=""
-        onClick={e => {
+        href=''
+        onClick={async e => {
           e.preventDefault();
-          signout();
+          try {
+            const res = await signout();
+            if (res.data.singout) {
+              Router.push("/");
+            }
+          } catch (err) {}
         }}
       >
         Sign Out

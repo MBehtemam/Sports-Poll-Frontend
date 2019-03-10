@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
+import Router from "next/router";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
 import { CURRENT_USER_QUERY } from "../components/Users/User";
@@ -37,37 +38,39 @@ export default class Signup extends Component {
             onSubmit={async e => {
               e.preventDefault();
               const res = await singUp();
-              //   this.setState({ name: "", email: "", password: "" });
+              if (res.data.singup) {
+                Router.push("/account");
+              }
             }}
           >
             <fieldset disabled={loading} aria-busy={loading}>
               <Error error={error} />
               <h2>Signup</h2>
-              <label htmlFor="name" name="name">
+              <label htmlFor='name' name='name'>
                 Name:
                 <input
-                  type="text"
+                  type='text'
                   onChange={e => this.setState({ name: e.target.value })}
                   value={this.state.name}
                 />
               </label>
-              <label htmlFor="name" name="name">
+              <label htmlFor='name' name='name'>
                 Email:
                 <input
-                  type="email"
+                  type='email'
                   onChange={e => this.setState({ email: e.target.value })}
                   value={this.state.email}
                 />
               </label>
-              <label htmlFor="name" name="name">
+              <label htmlFor='name' name='name'>
                 Password:
                 <input
-                  type="password"
+                  type='password'
                   onChange={e => this.setState({ password: e.target.value })}
                   value={this.state.password}
                 />
               </label>
-              <button type="submit">Sign Up</button>
+              <button type='submit'>Sign Up</button>
             </fieldset>
           </Form>
         )}
