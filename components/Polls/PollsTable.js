@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Router from "next/router";
 import Polls from "./Polls";
 
 const PollsTable = props => (
@@ -26,7 +28,11 @@ const PollsTable = props => (
                         src={`/static/sports/${poll.sport.icon}.png`}
                       />
                     </td>
-                    <td>{`${poll.home.name} - ${poll.away.name}`}</td>
+                    <td>
+                      <Link href={`/admin?section=poll&&pollId=${poll.id}`}>
+                        <a>{`${poll.home.name} - ${poll.away.name}`}</a>
+                      </Link>
+                    </td>
                     <td>{poll.state.name}</td>
                   </tr>
                 ))}

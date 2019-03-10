@@ -1,6 +1,9 @@
 const Picker = ({ items, onChange, defaultValue, keyValue, itemValue }) => (
-  <select onChange={e => onChange(e.target.value)}>
-    <option key="srandom-10-1" value={null}>
+  <select
+    onChange={e => onChange(e.target.value)}
+    defaultValue={defaultValue || ""}
+  >
+    <option key='srandom-10-1' value={null}>
       ----
     </option>
     {items.map(item => (

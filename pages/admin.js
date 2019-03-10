@@ -8,6 +8,7 @@ import TeamsManager from "../components/Teams/TeamsManager";
 import PollsManager from "../components/Polls/PollsManager";
 import UsersManager from "../components/Users/UsersManager";
 import PollStatesManager from "../components/PollStates/PollStateManager";
+import PollManager from "../components/Poll/PollManager";
 class AdminPage extends Component {
   static getInitialProps({ query }) {
     return { query };
@@ -31,6 +32,8 @@ class AdminPage extends Component {
         return <CountryManager />;
       case "users":
         return <UsersManager />;
+      case "poll":
+        return <PollManager {...this.props.query} />;
       default:
         return <span>No selected</span>;
     }

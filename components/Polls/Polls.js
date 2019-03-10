@@ -6,15 +6,19 @@ const ALL_POLLS_QUERY = gql`
     polls {
       id
       away {
+        id
         name
       }
       home {
+        id
         name
       }
       state {
+        id
         name
       }
       sport {
+        id
         icon
       }
     }
