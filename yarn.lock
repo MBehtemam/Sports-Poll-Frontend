@@ -3011,6 +3011,11 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
+highcharts-react-official@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/highcharts-react-official/-/highcharts-react-official-2.1.1.tgz#c3f323fc2db4eaf9aebee48660f97fc0e73b8b7f"
+  integrity sha512-No02RtlBESjMt11M3hZxFG04si3dbYCCmt31GNLeg4IVPJlx2kjsMNMKRy0yDGA7PsCJPUO0S8imngkN0T9x0Q==
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -5363,6 +5368,11 @@ react-error-overlay@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
   integrity sha512-FlsPxavEyMuR6TjVbSSywovXSEyOg6ZDj5+Z8nbsRl9EkOzAhEIcS+GLoQDC5fz/t9suhUXWmUrOBrgeUvrMxw==
+
+react-icons@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.5.0.tgz#a6135480e3bcbc63f5dd045193ef2a814263d8d1"
+  integrity sha512-LuKUcavgPWjPrRkIdNbsGw8LqcnhfNN0AGCtU4Td1UkOenJSIWbYppSJrD6zi/TDZOHtTs9opu6ZKB/NFWk21g==
 
 react-is@16.6.3:
   version "16.6.3"

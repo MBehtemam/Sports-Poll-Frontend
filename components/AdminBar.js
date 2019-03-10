@@ -1,4 +1,15 @@
 import Router from "next/router";
+import {
+  FaChartBar,
+  FaGlobeAmericas,
+  FaFootballBall,
+  FaUserFriends,
+  FaPeopleCarry,
+  FaUsers,
+  FaPollH,
+  FaPoll
+} from "react-icons/fa";
+
 import ButtonRow from "../components/styles/ButtonRow.styled";
 const AdminBar = () => (
   <ButtonRow>
@@ -7,51 +18,61 @@ const AdminBar = () => (
         Router.push({ pathname: "/admin", query: { section: "polls" } })
       }
     >
-      Polls
+      <FaPollH />
+      &nbsp; Polls
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "pollStates" } })
       }
     >
-      Poll States
+      <FaPoll />
+      &nbsp; Poll States
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "teams" } })
       }
     >
-      Teams
+      <FaPeopleCarry />
+      &nbsp; Teams
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "countries" } })
       }
     >
-      Countries
+      <FaGlobeAmericas />
+      &nbsp; Countries
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "groups" } })
       }
     >
-      Groups
+      <FaUsers />
+      &nbsp; Groups
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "sports" } })
       }
     >
-      Sports
+      <FaFootballBall />
+      &nbsp; Sports
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "users" } })
       }
     >
-      Users
+      <FaUserFriends />
+      &nbsp; Users
     </button>
-    <button>Statics</button>
+    <button>
+      <FaChartBar />
+      &nbsp; Statics
+    </button>
   </ButtonRow>
 );
 
