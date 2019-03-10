@@ -4,7 +4,7 @@ import NProgress from "nprogress";
 import Router from "next/router";
 import Header from "./styles/Header.styled";
 import Brand from "./styles/Brand.styled";
-import User from "../components/Users/User";
+import User from "../components/Users/User.apollo";
 import Navbar from "./Navbar";
 Router.onRouteChangeStart = () => {
   NProgress.start();
@@ -19,9 +19,9 @@ Router.onRouteChangeError = () => {
 const MainHeader = () => (
   <Header>
     <Brand>
-      <Link href="/">
+      <Link href='/'>
         <h1>
-          <a href="">Sports Poll</a>
+          <a href=''>Sports Poll</a>
         </h1>
       </Link>
     </Brand>

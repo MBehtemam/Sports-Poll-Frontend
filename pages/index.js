@@ -1,5 +1,5 @@
 import RandomPolls from "../components/RandomPolls";
-import User from "../components/Users/User";
+import User from "../components/Users/User.apollo";
 const IndexPage = () => (
   <div>
     <User>

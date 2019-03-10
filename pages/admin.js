@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AdminBar from "../components/AdminBar";
 import CreatePollState from "../components/Polls/CreatePollState";
-import User from "../components/Users/User";
+import User from "../components/Users/User.apollo";
 import CountryManager from "../components/Countries/CountriesManager";
 import SportsManager from "../components/Sports/SportsManager";
 import GroupsManager from "../components/Groups/GroupsManager";

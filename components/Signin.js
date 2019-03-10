@@ -4,7 +4,7 @@ import gql from "graphql-tag";
 import Router from "next/router";
 import Form from "./styles/Form.styled";
 import Error from "./ErrorMessage";
-import { CURRENT_USER_QUERY } from "../components/Users/User";
+import { CURRENT_USER_QUERY } from "../components/Users/User.apollo";
 
 const SIGN_IN_MUTATION = gql`
   mutation SIGN_IN_MUTATION($email: String!, $password: String!) {
