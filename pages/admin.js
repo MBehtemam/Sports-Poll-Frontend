@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import AdminBar from "../components/AdminBar";
-import CreatePollState from "../components/Polls/CreatePollState";
 import User from "../components/Users/User.apollo";
 import CountryManager from "../components/Countries/CountriesManager";
 import SportsManager from "../components/Sports/SportsManager";
@@ -8,6 +7,7 @@ import GroupsManager from "../components/Groups/GroupsManager";
 import TeamsManager from "../components/Teams/TeamsManager";
 import PollsManager from "../components/Polls/PollsManager";
 import UsersManager from "../components/Users/UsersManager";
+import PollStatesManager from "../components/PollStates/PollStateManager";
 class AdminPage extends Component {
   static getInitialProps({ query }) {
     return { query };
@@ -24,7 +24,7 @@ class AdminPage extends Component {
       case "groups":
         return <GroupsManager />;
       case "pollStates":
-        return <CreatePollState />;
+        return <PollStatesManager />;
       case "sports":
         return <SportsManager />;
       case "countries":

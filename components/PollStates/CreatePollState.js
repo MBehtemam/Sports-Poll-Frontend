@@ -3,7 +3,7 @@ import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import Form from "../styles/Form.styled";
 import Error from "../ErrorMessage";
-import { CREATE_POLL_INFORMATION_QUERY } from "./CreatePoll";
+import { CREATE_POLL_INFORMATION_QUERY } from "../Polls/CreatePoll";
 const CREATE_POLL_STATE_MUTATION = gql`
   mutation CREATE_SPORT_MUTATION($name: String, $value: String) {
     createPollState(name: $name, value: $value) {
@@ -41,30 +41,30 @@ export default class CreatePollState extends Component {
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
               <legend>Create Poll States</legend>
-              <label htmlFor="name">
+              <label htmlFor='name'>
                 Name:
                 <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="ex:Not Started"
+                  type='text'
+                  id='name'
+                  name='name'
+                  placeholder='ex:Not Started'
                   required
                   onChange={this.handelChange}
                   value={this.state.name}
                 />
               </label>
-              <label htmlFor="value">
+              <label htmlFor='value'>
                 Value:
                 <input
-                  type="text"
-                  id="value"
-                  name="value"
-                  placeholder="NOT_STARTED"
+                  type='text'
+                  id='value'
+                  name='value'
+                  placeholder='NOT_STARTED'
                   required
                   onChange={this.handelChange}
                   value={this.state.value}
                 />
-                <button type="submit">Create Poll State</button>
+                <button type='submit'>Create Poll State</button>
               </label>
             </fieldset>
           </Form>

@@ -4,6 +4,7 @@ import gql from "graphql-tag";
 const ALL_POLLS_QUERY = gql`
   query ALL_POLLS_QUERY {
     polls {
+      id
       away {
         name
       }

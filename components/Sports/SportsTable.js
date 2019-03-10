@@ -9,9 +9,11 @@ const SportsTable = props => (
             <h1>Manage Sports</h1>
             <table>
               <thead>
-                <th>#</th>
-                <th>Icon</th>
-                <th>Name</th>
+                <tr>
+                  <th>#</th>
+                  <th>Icon</th>
+                  <th>Name</th>
+                </tr>
               </thead>
               <tbody>
                 {sports.map((sport, index) => (
