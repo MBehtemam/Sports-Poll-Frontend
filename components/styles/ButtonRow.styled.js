@@ -17,7 +17,12 @@ const ButtonRow = styled.section`
     font-size: 1rem;
     font-weight: 500;
   }
-  @media screen and (max-width: 576px) {
+  @media screen and (min-width: 900px) {
+    button {
+      flex: 1;
+    }
+  }
+  @media screen and (max-width: 900px) {
     flex-wrap: wrap;
     button {
       width: 50%;

@@ -5,10 +5,12 @@ import Form from "../styles/Form.styled";
 import PollMutation from "./Poll.mutation";
 import PollStatesQuery from "../PollStates/PollStates.apollo";
 import Picker from "../Picker";
+import PollResultPicker from "../PollResult/PollResultPicker";
 
 export default class UpdatePoll extends Component {
   state = {
-    stateId: ""
+    stateId: "",
+    result: null
   };
   render() {
     const { pollId } = this.props;
@@ -24,7 +26,11 @@ export default class UpdatePoll extends Component {
                       e.preventDefault();
                       if (this.state.stateId !== "") {
                         const res = await updatePoll({
-                          variables: { pollId, stateId: this.state.stateId }
+                          variables: {
+                            pollId,
+                            stateId: this.state.stateId,
+                            result: this.state.result
+                          }
                         });
                       }
                     }}
@@ -32,31 +38,38 @@ export default class UpdatePoll extends Component {
                     <Error error={error} />
                     <fieldset disabled={loading} aria-busy={loading}>
                       <legend>Update Poll</legend>
-                      <label htmlFor='country' name='country'>
+                      <label htmlFor="country" name="country">
                         Country:
                         <input
-                          type='text'
+                          type="text"
                           readOnly
                           value={data.poll.country.name}
                         />
                       </label>
-                      <label htmlFor='group' name='group'>
+                      <label htmlFor="group" name="group">
                         Group:
                         <input
-                          type='text'
+                          type="text"
                           readOnly
                           value={data.poll.group.name}
                         />
                       </label>
-                      <label htmlFor='sport' name='sport'>
+                      <label htmlFor="sport" name="sport">
                         Sport:
                         <input
-                          type='text'
+                          type="text"
                           readOnly
                           value={data.poll.sport.name}
                         />
                       </label>
-                      <label htmlFor='state' name='state'>
+                      <label htmlFor="result" name="result">
+                        Result:
+                        <PollResultPicker
+                          defaultValue={data.poll.result}
+                          onChange={r => this.setState({ result: r })}
+                        />
+                      </label>
+                      <label htmlFor="state" name="state">
                         State:
                         <PollStatesQuery>
                           {({ data: { pollStates } }) => {
@@ -67,8 +80,8 @@ export default class UpdatePoll extends Component {
                                     this.setState({ stateId: val })
                                   }
                                   items={pollStates}
-                                  itemValue='name'
-                                  keyValue='id'
+                                  itemValue="name"
+                                  keyValue="id"
                                   defaultValue={data.poll.state.id}
                                 />
                               );
@@ -78,23 +91,23 @@ export default class UpdatePoll extends Component {
                           }}
                         </PollStatesQuery>
                       </label>
-                      <label htmlFor='away' name='away'>
+                      <label htmlFor="away" name="away">
                         Away Team:
                         <input
-                          type='text'
+                          type="text"
                           readOnly
                           value={data.poll.away.name}
                         />
                       </label>
-                      <label htmlFor='home' name='home'>
+                      <label htmlFor="home" name="home">
                         Home Team:
                         <input
-                          type='text'
+                          type="text"
                           readOnly
                           value={data.poll.home.name}
                         />
                       </label>
-                      <button type='submit'>Update Poll</button>
+                      <button type="submit">Update Poll</button>
                     </fieldset>
                   </Form>
                 )}
