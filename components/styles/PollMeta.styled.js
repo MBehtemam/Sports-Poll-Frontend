@@ -7,5 +7,10 @@ const PollMeta = styled.div`
   flex-direction: column;
   font-weight: 300;
   font-size: 1.5rem;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
 `;
 export default PollMeta;

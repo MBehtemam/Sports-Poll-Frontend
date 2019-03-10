@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const PollTeamsTitle = styled.div`
-  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +9,10 @@ const PollTeamsTitle = styled.div`
   text-align: center;
   span {
     margin-right: 10px;
+  }
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    font-size: 1.5rem;
   }
 `;
 export default PollTeamsTitle;

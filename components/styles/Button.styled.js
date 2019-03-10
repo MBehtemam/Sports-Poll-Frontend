@@ -27,5 +27,8 @@ const Button = styled.button`
   }};
   box-shadow: ${props =>
     props.color === "red" ? "8px 8px 0 rgba(251, 59, 73, 0.2);" : ""};
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
 `;
 export default Button;

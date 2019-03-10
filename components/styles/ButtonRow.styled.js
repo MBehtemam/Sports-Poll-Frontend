@@ -8,7 +8,6 @@ const ButtonRow = styled.section`
   button {
     border: 0;
     display: flex;
-    flex: 1;
     justify-content: center;
     align-items: center;
     width: 128px;
@@ -22,6 +21,8 @@ const ButtonRow = styled.section`
     flex-wrap: wrap;
     button {
       width: 50%;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 `;
