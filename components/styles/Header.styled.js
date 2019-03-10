@@ -10,5 +10,9 @@ const Header = styled.header`
   padding-top: 1rem;
   padding-bottom: 1rem;
   align-items: center;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 export default Header;

@@ -16,11 +16,11 @@ const Form = styled.form`
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
   background: rgba(0, 0, 0, 0.02);
   border: 5px solid white;
-  padding: 20px;
-  font-size: 1.5rem;
+  padding: 10px;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: 600;
-  min-width: 400px;
+  min-width: 300px;
   label {
     display: block;
     margin-bottom: 1rem;
@@ -43,9 +43,10 @@ const Form = styled.form`
     background: red;
     color: white;
     border: 0;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 600;
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
   }
   fieldset {
     border: 0;

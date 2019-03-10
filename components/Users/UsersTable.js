@@ -7,11 +7,9 @@ const UsersTable = () => (
       if (data.users && data.users.length > 0) {
         return (
           <div style={{ margin: "auto auto" }}>
-            <table border='1'>
+            <table border="1">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Name</th>
                   <th>Email</th>
                   <th>Permissions</th>
                   <th>Actions</th>
@@ -20,10 +18,13 @@ const UsersTable = () => (
               <tbody>
                 {data.users.map((user, userIndex) => (
                   <tr key={user.id}>
-                    <td>{userIndex + 1}</td>
-                    <td>{user.name}</td>
                     <td>{user.email}</td>
-                    <td>{user.permissions.toString()}</td>
+                    <td>
+                      {user.permissions
+                        .sort((a, b) => b - a)
+                        .map(p => p[0].toUpperCase())
+                        .join(",")}
+                    </td>
                     <td>
                       {!user.permissions.includes("ADMIN") && (
                         <UserPermissions>
@@ -38,14 +39,14 @@ const UsersTable = () => (
                                 })
                               }
                             >
-                              Make Admin
+                              MA
                             </button>
                           )}
                         </UserPermissions>
                       )}
 
                       {!user.permissions.includes("ADMIN") && (
-                        <button>Delete</button>
+                        <button>R</button>
                       )}
                       {user.permissions.includes("ADMIN") && (
                         <UserPermissions>
@@ -60,7 +61,7 @@ const UsersTable = () => (
                                 })
                               }
                             >
-                              Remove Admin Permission
+                              RA
                             </button>
                           )}
                         </UserPermissions>

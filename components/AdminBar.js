@@ -7,50 +7,51 @@ const AdminBar = () => (
         Router.push({ pathname: "/admin", query: { section: "polls" } })
       }
     >
-      Manage Polls
+      Polls
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "pollStates" } })
       }
     >
-      Manage Poll States
+      Poll States
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "teams" } })
       }
     >
-      Manage Teams
+      Teams
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "countries" } })
       }
     >
-      Manage Countries
+      Countries
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "groups" } })
       }
     >
-      Manage Groups
+      Groups
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "sports" } })
       }
     >
-      Manage Sports
+      Sports
     </button>
     <button
       onClick={() =>
         Router.push({ pathname: "/admin", query: { section: "users" } })
       }
     >
-      Manage Users
+      Users
     </button>
+    <button>Statics</button>
   </ButtonRow>
 );
 
