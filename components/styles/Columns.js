@@ -5,7 +5,7 @@ const Columns = styled.div`
   flex-direction: row;
   justify-content: space-around;
   flex: 1;
-
+  padding: 10px;
   @media screen and (max-width: 576px) {
     flex-direction: column;
   }
