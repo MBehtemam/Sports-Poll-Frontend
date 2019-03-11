@@ -60,6 +60,7 @@
     "jest": "^24.1.0",
     "jest-styled-components": "^6.3.1",
     "jest-transform-graphql": "^2.1.0",
-    "react-test-renderer": "^16.8.3"
+    "react-test-renderer": "^16.8.3",
+    "waait": "^1.0.4"
   }
 }
