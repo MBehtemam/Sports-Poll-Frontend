@@ -7,7 +7,7 @@
     "dev": "next -p 7777",
     "build": "next build",
     "start": "next start -p $PORT",
-    "test": "jest --watch",
+    "test": "jest",
     "heroku-postbuild": "next build"
   },
   "repository": {
