@@ -1,5 +1,6 @@
 import Users from "./Users.apollo";
 import UserPermissions from "./UserPermission.apollo";
+import { FaUserSecret, FaUserTimes, FaUserSlash } from "react-icons/fa";
 
 const UsersTable = () => (
   <Users>
@@ -21,7 +22,12 @@ const UsersTable = () => (
                     <td>{user.email}</td>
                     <td>
                       {user.permissions
-                        .sort((a, b) => b - a)
+                        .sort((a, b) => {
+                          if (a > b) {
+                            return 1;
+                          } else if (a < b) return -1;
+                          else return 0;
+                        })
                         .map(p => p[0].toUpperCase())
                         .join(",")}
                     </td>
@@ -39,14 +45,16 @@ const UsersTable = () => (
                                 })
                               }
                             >
-                              MA
+                              <FaUserSecret />
                             </button>
                           )}
                         </UserPermissions>
                       )}
 
                       {!user.permissions.includes("ADMIN") && (
-                        <button>R</button>
+                        <button>
+                          <FaUserSlash />
+                        </button>
                       )}
                       {user.permissions.includes("ADMIN") && (
                         <UserPermissions>
@@ -61,7 +69,7 @@ const UsersTable = () => (
                                 })
                               }
                             >
-                              RA
+                              <FaUserTimes />
                             </button>
                           )}
                         </UserPermissions>
