@@ -5,7 +5,7 @@ import {
   Bar,
   XAxis,
   YAxis,
-  CartesianGrid,
+  ResponsiveContainer,
   Tooltip,
   Legend
 } from "recharts";
@@ -28,13 +28,25 @@ const SportsPollsCount = () => (
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error</p>;
       return (
-        <BarChart width={400} height={300} data={data.sportsPollCount.results}>
-          <XAxis dataKey="label" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="count" fill="#8884d8" background={{ fill: "#eee" }} />
-        </BarChart>
+        <div style={{ width: "100%", height: "300px" }}>
+          <ResponsiveContainer>
+            <BarChart
+              width={400}
+              height={300}
+              data={data.sportsPollCount.results}
+            >
+              <XAxis dataKey="label" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar
+                dataKey="count"
+                fill="#8884d8"
+                background={{ fill: "#eee" }}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       );
     }}
   </Query>
