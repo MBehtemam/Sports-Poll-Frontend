@@ -26,8 +26,6 @@
     "apollo-link-http": "^1.5.11",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
-    "highcharts": "^7.0.3",
-    "highcharts-react-official": "^2.1.1",
     "next": "^8.0.3",
     "next-with-apollo": "^3.3.2",
     "nprogress": "^0.2.0",
