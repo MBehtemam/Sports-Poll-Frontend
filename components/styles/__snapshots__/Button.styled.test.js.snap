@@ -12,6 +12,12 @@ exports[`Test suits for button.styled should match with snapshot 1`] = `
   color: black;
 }
 
+@media screen and (max-width:576px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
 <button
   className="c0"
 />

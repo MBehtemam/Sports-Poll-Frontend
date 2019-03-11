@@ -2,12 +2,14 @@
 
 exports[`Test suits for Picker should match with snapshot 1`] = `
 <select
+  defaultValue=""
   onChange={[Function]}
 >
   <option
-    value={null}
+    disabled={true}
+    value=""
   >
-    ----
+    ------------
   </option>
   <option
     value="name1"
