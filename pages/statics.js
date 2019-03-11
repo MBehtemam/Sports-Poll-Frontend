@@ -1,2 +1,3 @@
-const StaticsPage = () => <div>Static Page</div>;
+import UserStatics from "../components/Statics/User/UserStatics";
+const StaticsPage = () => <UserStatics />;
 export default StaticsPage;

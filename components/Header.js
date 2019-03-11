@@ -4,6 +4,7 @@ import NProgress from "nprogress";
 import Router from "next/router";
 import Header from "./styles/Header.styled";
 import Brand from "./styles/Brand.styled";
+import BrandImage from "./styles/BrandImage.styled";
 import User from "../components/Users/User.apollo";
 import Navbar from "./Navbar";
 Router.onRouteChangeStart = () => {
@@ -19,9 +20,12 @@ Router.onRouteChangeError = () => {
 const MainHeader = () => (
   <Header>
     <Brand>
-      <Link href='/'>
+      <Link href="/">
         <h1>
-          <a href=''>Sports Poll</a>
+          <a href="">
+            <BrandImage src="/static/img/brand.png" />
+            Sports Poll
+          </a>
         </h1>
       </Link>
     </Brand>

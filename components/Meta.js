@@ -2,8 +2,9 @@ import Head from "next/head";
 
 const Meta = () => (
   <Head>
+    <title>Sports Poll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />>
-    <meta charset="utf-8" />
+    <meta charSet="utf-8" />
     <link rel="stylesheet" href="/static/reboot.css" />
     <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
